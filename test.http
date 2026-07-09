@@ -1,0 +1,20 @@
+### 1. Получить все задачи
+GET http://localhost:8080/tasks
+
+###
+
+### 2. Создать новую задачу
+POST http://localhost:8080/create
+Content-Type: application/json
+
+{
+  "name": "купить сигареты"
+}
+
+### 3. Сменить статус задачи
+PATCH http://localhost:8080/tasks/change
+Content-Type: application/json
+
+{
+  "id": 1
+}
