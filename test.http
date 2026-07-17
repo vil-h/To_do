@@ -8,7 +8,8 @@ POST http://localhost:8080/create
 Content-Type: application/json
 
 {
-  "name": "купить сигареты"
+  "name": "Выпить",
+  "deadline_time": "2026-07-20 18:10:01"
 }
 
 ### 3. Сменить статус задачи
@@ -16,5 +17,13 @@ PATCH http://localhost:8080/tasks/change
 Content-Type: application/json
 
 {
-  "id": 1
+  "id": 2
+}
+
+### 4. Удалить(архивировать) задачу
+DELETE http://localhost:8080/tasks/delete
+Content-Type: application/json
+
+{
+  "id": 2
 }
