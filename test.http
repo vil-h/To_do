@@ -17,7 +17,7 @@ PATCH http://localhost:8080/tasks/change
 Content-Type: application/json
 
 {
-  "id": 2
+  "id": 7
 }
 
 ### 4. Удалить(архивировать) задачу

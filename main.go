@@ -25,6 +25,18 @@ func main() {
 	http.HandleFunc("/create", handlers.CreateTaskHandler)
 	http.HandleFunc("/tasks/change", handlers.ChangeHandler)
 	http.HandleFunc("/tasks/delete", handlers.DeleteTask)
+
+	fs := http.FileServer(http.Dir("./web"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path != "/" {
+			http.NotFound(w, r)
+			return
+		}
+		http.ServeFile(w, r, "./web/index.html")
+	})
+
 	err = http.ListenAndServe("localhost:8080", nil)
 	if err != nil {
 		fmt.Println(err)

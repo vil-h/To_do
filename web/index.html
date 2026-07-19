@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Punaev</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-$END$
+<header class="header">
+    <div class="header__container">
+        <nav class="header__nav">
+            <img src="/static/images/favicon.png" alt="Logo" class="logo">
+            <a href="#" class="header__btn">Добавить Задачу</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <form action="" class="main__form">
+        <nav class="main__nav">
+            <input type="text" class="main__input" placeholder="Напиши Задачу" required>
+            <button type="submit" class="main__btn">Добавить</button>
+            <ul class="todoList"></ul>
+        </nav>
+    </form>
+</main>
+
+<footer class="footer">
+    <div class="footer__container">
+        <p class="footer__text">© 2024 ToDo Punaev. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/static/script.js" defer></script>
 </body>
 </html>
